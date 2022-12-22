@@ -1,0 +1,24 @@
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #ffffff;
+  --mainBlack: #222;
+  --mainGray: #7c7c7c;
+  --mainRed: #dc2626;
+  --mainNavy: #1e293b;
+}
+.tooltip{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mainNavy);
+  color: var(--mainWhite);
+  opacity: 0.9;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+  transition: 0.1s;
+  scale: 0;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+}
