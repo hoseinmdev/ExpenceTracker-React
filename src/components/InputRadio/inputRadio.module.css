@@ -1,0 +1,35 @@
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #ffffff;
+  --mainBlack: #222;
+  --mainGray: #7c7c7c;
+  --mainRed: #dc2626;
+  --mainNavy: #1e293b;
+}
+.radioBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.radioButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--mainNavy);
+    overflow: hidden;
+    border-radius: 100%;
+    padding: 0.2rem;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.20);
+    
+
+}
+.innerRadioButton{
+    background-color: var(--mainNavy);
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 100%;
+    transition: 0.2s;
+    
+}
