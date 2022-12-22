@@ -1,0 +1,123 @@
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #ffffff;
+  --mainBlack: #222;
+  --mainGray: #7c7c7c;
+  --mainRed: #dc2626;
+  --mainNavy: #1e293b;
+}
+
+.showExpenceBlock {
+  width: 17rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--mainBlack);
+  padding: 1.5rem;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.expenceResultBlock {
+  width: 95%;
+  cursor: default;
+  color: var(--mainNavy);
+  border: 2px solid var(--mainNavy);
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  gap: 0.7rem;
+}
+.showExpenceBlock div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+.userExpenceBlock {
+  width: 100%;
+  color: var(--mainRed);
+  border: 2px solid var(--mainRed);
+  border-radius: 8px;
+  padding: 0.5rem;
+  outline: none;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.2rem;
+}
+.userIncomeBlock {
+  width: 100%;
+  color: green;
+  border: 2px solid green;
+  border-radius: 8px;
+  padding: 0.5rem;
+  outline: none;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+}
+.showExpenceBlock button {
+  cursor: pointer;
+  background-color: var(--mainNavy);
+  color: var(--mainWhite);
+  border-radius: 8px;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  width: 100%;
+}
+.showExpenceBlock button:hover {
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+}
+.formBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 2px solid var(--mainNavy);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 90%;
+  scale: 0;
+  transition: 0.3s;
+}
+.formBlock label {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.09);
+  border-radius: 8px;
+}
+.formBlock label input {
+  font-size: 1rem;
+  border-radius: 8px;
+  outline: none;
+  padding: 0.3rem;
+  border: none;
+}
+.radioBlock {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
