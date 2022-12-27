@@ -6,6 +6,7 @@ import { v4 as uuid } from "uuid";
 import { toast } from "react-hot-toast";
 import Tooltip from "../Common/Tooltip/Toooltip";
 import digitSeprator from "../../Utils/digitSeprator";
+import digitHider from "../../Utils/digitHider";
 
 const ShowExpence = () => {
   const [number, setNumber] = useState("");
@@ -62,10 +63,11 @@ const ShowExpence = () => {
   const stringIncomes = digitSeprator(allIncomes);
   const stringExpences = digitSeprator(allExpences);
   const stringExpenceResult = digitSeprator(expenceResult);
-  
+
   return (
     <>
       <div className={styles.showExpenceBlock}>
+      
         <span className={styles.expenceResultBlock}>
           <span>موجودی شما :</span>
           <span
@@ -82,7 +84,7 @@ const ShowExpence = () => {
               ""
             )}
             {stringExpenceResult.length > 5
-              ? stringExpenceResult.slice(0, 10) + "... "
+              ? digitHider(stringExpenceResult, 0, 10)
               : " " + stringExpenceResult + " "}
             تومان
           </span>
@@ -105,8 +107,9 @@ const ShowExpence = () => {
               onMouseLeave={() => setshowIncomes(0)}
             >
               {stringIncomes.length > 5
-                ? stringIncomes.slice(0, 6) + "... تومان"
-                : stringIncomes + " تومان"}
+                ? digitHider(stringIncomes, 0, 6)
+                : stringIncomes + " "}
+              تومان
             </span>
           </span>
 
@@ -126,8 +129,9 @@ const ShowExpence = () => {
               onMouseLeave={() => setshowExpences(0)}
             >
               {stringExpences.length > 5
-                ? stringExpences.slice(0, 6) + "... تومان"
-                : stringExpences + " تومان"}
+                ? digitHider(stringExpences, 0, 6)
+                : stringExpences + " "}
+              تومان
             </span>
           </span>
         </div>

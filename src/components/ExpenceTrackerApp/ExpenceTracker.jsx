@@ -57,6 +57,54 @@ const ExpenceTrackerApp = ({ children }) => {
         allTransactions: allDeletedExpence,
       };
     }
+    if (action.type === "editIncomeTransaction") {
+      const editedTransaction = state.transactions.income.map((t) => {
+        if (t.id === action.id) {
+          t.title = action.newTitle;
+          t.cash = action.newCash;
+        }
+        return t;
+      });
+      const allEditedTransaction = state.allTransactions.map((t) => {
+        if (t.id === action.id) {
+          t.title = action.title;
+          t.cash = action.cash;
+        }
+        return t;
+      });
+      return {
+        ...state,
+        transactions: {
+          income: editedTransaction,
+          expence: [...state.transactions.expence],
+        },
+        allTransactions: allEditedTransaction,
+      };
+    }
+    if (action.type === "editExpenceTransaction") {
+      const editedTransaction = state.transactions.expence.map((t) => {
+        if (t.id === action.id) {
+          t.title = action.newTitle;
+          t.cash = action.newCash;
+        }
+        return t;
+      });
+      const allEditedTransaction = state.allTransactions.map((t) => {
+        if (t.id === action.id) {
+          t.title = action.newTitle;
+          t.cash = action.newCash;
+        }
+        return t;
+      });
+      return {
+        ...state,
+        transactions: {
+          income: [...state.transactions.income],
+          expence: editedTransaction,
+        },
+        allTransactions: allEditedTransaction,
+      };
+    }
   };
   const [state, dispatch] = useReducer(reducer, {
     transactions: { income: [], expence: [] },

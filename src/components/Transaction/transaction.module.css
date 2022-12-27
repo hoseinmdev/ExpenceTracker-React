@@ -3,6 +3,7 @@
   --secondaryRed: #fef2f2;
   --primaryGreen: #15803d;
   --secondaryGreen: #f7fee7;
+  --primaryPurple: #6d28d9;
   --mainWhite: #ffffff;
   --mainBlack: #222;
   --mainGray: #7c7c7c;
@@ -20,13 +21,13 @@
   scale: 0;
 }
 .incomeTransaction {
-  box-shadow: 0px 1px 8px 0px rgba(0, 800, 0, 0.50);
+  box-shadow: 0px 1px 8px 0px rgba(0, 800, 0, 0.5);
   background-color: var(--secondaryGreen);
   color: var(--mainNavy);
 }
 .expenceTransaction {
   color: var(--mainNavy);
-  box-shadow: 0px 1px 8px 0px rgba(800, 0, 0, 0.50);
+  box-shadow: 0px 1px 8px 0px rgba(800, 0, 0, 0.5);
   background-color: var(--secondaryRed);
 }
 .transactionTitleCash {
@@ -36,7 +37,7 @@
   justify-content: center;
   gap: 0.5rem;
 }
-.transactionIcons{
+.transactionIcons {
   display: flex;
   gap: 0.5rem;
 }
@@ -53,7 +54,7 @@
   padding: 0.5rem;
   transition: 0.2s;
 }
-.transactionDelete:hover{
+.transactionDelete:hover {
   rotate: 360deg;
 }
 .transactionEdit {
@@ -69,6 +70,80 @@
   padding: 0.5rem;
   transition: 0.3s;
 }
-.transactionEdit:hover{
+.transactionEdit:hover {
   rotate: 360deg;
+}
+
+.formBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  width: 90%;
+  scale: 0;
+  transition: 0.3s;
+}
+.formBlock label {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.09);
+  border-radius: 8px;
+}
+.formBlock label input {
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+}
+.radioBlock {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.submitButton {
+  cursor: pointer;
+  background-color: var(--mainNavy);
+  color: var(--mainWhite);
+  border-radius: 8px;
+  padding: 0.4rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cancelButton {
+  cursor: pointer;
+  background-color: var(--mainWhite);
+  border: 2px solid var(--primaryRed);
+  color: var(--primaryRed);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s;
+  width: 50%;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submitButton:hover {
+  background-color: var(--primaryPurple);
+  color: var(--mainWhite);
+}
+.cancelButton:hover{
+  background-color: var(--primaryRed);
+  color: var(--mainWhite);
+}
+.buttonsBlock {
+  width: 90%;
+  display: flex;
+  gap: 0.7rem;
 }
